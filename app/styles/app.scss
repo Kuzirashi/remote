@@ -1,0 +1,23 @@
+
+
+@import "settings";
+
+@import "foundation";
+
+.text-switch-wrapper {
+  position: relative;
+  height: 32px;
+  line-height: 32px;
+}
+
+.right-switch {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.temperature-control {
+  background: url("../images/temperature.png");
+  background-position-y: -300px;
+  color: white;
+}
