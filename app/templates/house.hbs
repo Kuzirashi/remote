@@ -1,0 +1,35 @@
+{{#ember-wormhole to='tab-bar-left'}}
+  {{#link-to 'index'}}<i class="fa fa-arrow-left"></i>{{/link-to}}
+{{/ember-wormhole}}
+
+{{#ember-wormhole to='page-title'}}
+  {{model.name}}
+{{/ember-wormhole}}
+
+<div class="row">
+  {{#switchable-setting
+    model=model.lights
+    class='small-12 columns panel stylish-overlay'
+    automationAction=CHANGE_ACTIONS.LIGHTS
+    switchId='lightsSwitch'
+    disabled=model.isSaving}}
+      CONTROL LIGHTS
+  {{/switchable-setting}}
+
+  {{#incrementable-setting
+    model=model.temperature
+    class='small-12 columns panel temperature-control stylish-overlay'
+    automationAction=CHANGE_ACTIONS.TEMPERATURE
+    step=1
+    disabled=model.isSaving}}
+      CONTROL TEMPERATURE
+  {{/incrementable-setting}}
+
+  {{#switchable-setting model=model.curtains
+    class='small-12 columns panel stylish-overlay'
+    automationAction=CHANGE_ACTIONS.CURTAINS
+    switchId='curtainsSwitch'
+    disabled=model.isSaving}}
+      CONTROL CURTAINS
+  {{/switchable-setting}}
+</div>

@@ -1,0 +1,8 @@
+<div class="text-switch-wrapper">
+  <span>{{yield}}</span>
+  <div class="right setting-right noselect">
+    <i class="fa fa-arrow-up setting-arrow {{if disabled 'disabled'}}" {{action 'increase'}}></i>
+    {{model}}
+    <i class="fa fa-arrow-down setting-arrow {{if disabled 'disabled'}}" {{action 'decrease'}}></i>
+  </div>
+</div>

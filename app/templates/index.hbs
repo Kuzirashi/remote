@@ -1,0 +1,7 @@
+{{#ember-wormhole to='page-title'}}
+  CHOOSE HOUSE
+{{/ember-wormhole}}
+
+{{#each model as |house|}}
+  <div class="row text-center house-item">{{#link-to 'house' house class='button'}}{{house.name}}{{/link-to}}</div>
+{{/each}}
