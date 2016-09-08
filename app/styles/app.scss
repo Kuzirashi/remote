@@ -11,21 +11,17 @@ $switch-active-color: $secondary-color;
 
 $control-height: 74px;
 
-.text-switch-wrapper {
-  position: relative;
-  height: 32px;
-  line-height: 32px;
-}
-
 .setting-right {
-  position: absolute;
-  right: 0;
-  top: 0;
+  margin-left: auto;
   z-index: 1;
+  margin-top: 4px;
 }
 
 .setting-control {
   height: $control-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &::after {
     content: '';
@@ -94,11 +90,7 @@ $control-height: 74px;
 
 .setting-incrementable-right {
   text-align: center;
-  margin-top: -18px;
-  width: 104px;
-  position: absolute;
-  top: 18px;
-  right: 0;
+  margin-top: 2px;
 }
 
 .setting-incrementable-shortcut {

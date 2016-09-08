@@ -1,14 +1,12 @@
-<div class="setting-incrementable-wrapper">
-  <span>{{yield}}</span>
-  <div class="right setting-right setting-incrementable-right noselect">
-    <div class="row">
-      <div class="setting-incrementable-shortcut label" {{action 'setToMaximum'}}>SET MAX</div>
-    </div>
-    <i class="fa fa-arrow-up setting-arrow {{if disabled 'disabled'}}" {{action 'increase'}}></i>
-    <span class="label secondary">{{model}}</span>
-    <i class="fa fa-arrow-down setting-arrow {{if disabled 'disabled'}}" {{action 'decrease'}}></i>
-    <div class="row">
-      <div class="setting-incrementable-shortcut label" {{action 'setToMinimum'}}>SET MIN</div>
-    </div>
+<span>{{yield}}</span>
+<div class="right setting-right setting-incrementable-right noselect">
+  <div class="row">
+    <div class="setting-incrementable-shortcut label" {{action 'setToMaximum'}}>SET MAX</div>
+  </div>
+  <i class="fa fa-arrow-up setting-arrow {{if disabled 'disabled'}}" {{action 'increase'}}></i>
+  <span class="label secondary">{{model}}</span>
+  <i class="fa fa-arrow-down setting-arrow {{if disabled 'disabled'}}" {{action 'decrease'}}></i>
+  <div class="row">
+    <div class="setting-incrementable-shortcut label" {{action 'setToMinimum'}}>SET MIN</div>
   </div>
 </div>
