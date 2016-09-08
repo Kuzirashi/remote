@@ -2,7 +2,7 @@ export default function() {
   this.transition(
     this.fromRoute('index'),
     this.toRoute('house'),
-    this.use('crossFade'),
+    this.use('toLeft'),
     this.reverse('toRight')
   );
 

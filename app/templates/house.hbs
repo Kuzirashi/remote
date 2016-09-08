@@ -1,10 +1,6 @@
-{{#ember-wormhole to='tab-bar-left'}}
-  {{#link-to 'index'}}<i class="fa fa-arrow-left"></i>{{/link-to}}
-{{/ember-wormhole}}
-
-{{#ember-wormhole to='page-title'}}
-  {{model.name}}
-{{/ember-wormhole}}
+<header class="row page-title">
+  {{link-to 'back' 'index' class='rounded-button'}} {{model.name}}
+</header>
 
 <div class="row">
   {{#switchable-setting

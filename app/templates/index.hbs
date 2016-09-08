@@ -1,6 +1,4 @@
-{{#ember-wormhole to='page-title'}}
-  CHOOSE HOUSE
-{{/ember-wormhole}}
+<header class="row page-title">choose house</header>
 
 {{#each model as |house|}}
   <div class="row text-center house-item">{{#link-to 'house' house class='button'}}{{house.name}}{{/link-to}}</div>

@@ -27,6 +27,8 @@ $control-height: 80px;
   align-items: center;
   justify-content: center;
   font-size: $label-font-sizing;
+  background: rgba(226, 226, 226, 0.58);
+  color: $primary-color;
 
   &::after {
     content: '';
@@ -48,7 +50,7 @@ $control-height: 80px;
 
 .main-content {
   width: 80%;
-  margin: 20px auto;
+  margin: auto;
 }
 
 .noselect {
@@ -61,13 +63,21 @@ $control-height: 80px;
                                   not supported by any browser */
 }
 
-#page-title, .house-item {
+.house-item {
   text-transform: uppercase;
+}
+
+.page-title {
+  font-weight: 100;
+  font-size: 36px;
+  text-transform: lowercase;
+  padding-bottom: 6px;
 }
 
 .setting-arrow {
   cursor: pointer;
   vertical-align: text-top;
+  color: $secondary-color;
 
   &.disabled {
     cursor: progress;
@@ -124,6 +134,22 @@ $control-height: 80px;
 .setting-incrementable-counter {
   .liquid-container {
     width: 30px;
+  }
+}
+
+.rounded-button {
+  border: 1px solid white;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 4px 32px;
+  font-weight: 400;
+  float: right;
+  margin-top: 12px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: black;
+    background-color: white;
   }
 }
 
