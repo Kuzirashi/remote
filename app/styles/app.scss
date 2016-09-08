@@ -32,7 +32,7 @@ $control-height: 80px;
 
 .setting-control {
   @extend .semi-transparent-element;
-  
+
   font-size: $label-font-sizing;
 
   &::after {
@@ -128,10 +128,12 @@ $control-height: 80px;
   color: white;
   z-index: 1;
   position: relative;
+  opacity: 1;
   transition: all 1s cubic-bezier(.87,-.41,.19,1.44);
 
   &.off {
-    color: transparent;
+    visibility: hidden;
+    opacity: 0;
   }
 }
 
@@ -159,6 +161,12 @@ $control-height: 80px;
     color: black;
     background-color: white;
   }
+}
+
+footer {
+  text-align: center;
+  color: white;
+  position: relative;
 }
 
 @include mq($min-width: 412px) {
