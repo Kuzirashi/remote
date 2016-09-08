@@ -21,7 +21,10 @@
     class='small-12 columns panel temperature-control stylish-overlay'
     automationAction=CHANGE_ACTIONS.TEMPERATURE
     step=1
-    disabled=model.isSaving}}
+    disabled=model.isSaving
+    min=settings.temperatureMin
+    max=settings.temperatureMax
+  }}
       CONTROL TEMPERATURE
   {{/incrementable-setting}}
 

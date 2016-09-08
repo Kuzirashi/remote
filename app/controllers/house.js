@@ -8,6 +8,7 @@ const CHANGE_ACTIONS = {
 
 export default Ember.Controller.extend({
   automation: Ember.inject.service(),
+  settings: Ember.inject.service(),
 
   CHANGE_ACTIONS,
 

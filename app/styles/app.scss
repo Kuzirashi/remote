@@ -68,3 +68,21 @@ $switch-active-color: $secondary-color;
     color: gray;
   }
 }
+
+.cold {
+  height: 100vh;
+  width: 100%;
+  background: url('/images/cold.png')
+}
+
+.hot {
+  height: 100vh;
+  width: 100%;
+  background: url('/images/hot.png')
+}
+
+.temperature-feedback {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}

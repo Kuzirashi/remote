@@ -1,11 +1,16 @@
-<nav class="tab-bar">
-  <section class="left-small text-center" id="tab-bar-left"></section>
+<div class="live-feedback">
+  {{temperature-feedback min=settings.temperatureMin max=settings.temperatureMax class='cold' invertOpacity=true}}
+  {{temperature-feedback min=settings.temperatureMin max=settings.temperatureMax class='hot'}}
 
-  <section class="middle tab-bar-section">
-    <h1 class="title" id="page-title"></h1>
-  </section>
-</nav>
+  <nav class="tab-bar">
+    <section class="left-small text-center" id="tab-bar-left"></section>
 
-<main class="main-content">
-  {{outlet}}
-</main>
+    <section class="middle tab-bar-section">
+      <h1 class="title" id="page-title"></h1>
+    </section>
+  </nav>
+
+  <main class="main-content">
+    {{outlet}}
+  </main>
+</div>
