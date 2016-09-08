@@ -9,6 +9,8 @@ $switch-active-color: $secondary-color;
 
 @import "foundation";
 
+@import "bower_components/sass-mediaqueries/_media-queries";
+
 $control-height: 74px;
 
 .setting-right {
@@ -22,6 +24,7 @@ $control-height: 74px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: $label-font-sizing;
 
   &::after {
     content: '';
@@ -84,7 +87,7 @@ $control-height: 74px;
 
 .temperature-feedback {
   background-size: cover;
-  position: absolute;
+  position: fixed;
   transition: opacity 1s ease-in-out;
 }
 
@@ -107,5 +110,11 @@ $control-height: 74px;
 
   &.off {
     color: transparent;
+  }
+}
+
+@include mq($min-width: 412px) {
+  .setting-control {
+    font-size: 100%;
   }
 }
