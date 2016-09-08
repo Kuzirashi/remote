@@ -9,6 +9,9 @@ module.exports = function(defaults) {
     foundationJs: false,
     babel: {
       optional: ['es7.decorators']
+    },
+    autoprefixer: {
+      browsers: ['last 2 versions']
     }
   });
 

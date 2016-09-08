@@ -2,6 +2,7 @@ import Ember from 'ember';
 import SwitchableComponentMixin from '../mixins/switchable-component';
 
 export default Ember.Component.extend(SwitchableComponentMixin, {
+  classNames: ['incrementable-setting'],
   step: 1,
   min: 0,
   max: 0,

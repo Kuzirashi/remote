@@ -1,6 +1,8 @@
 $primary-color: white;
 $secondary-color: black;
 $body-font-color: white;
+$body-font-family: 'Raleway', Helvetica, Arial, sans-serif;
+$body-font-weight: 400;
 $anchor-font-color: white;
 $body-bg: #c7c7c7;
 $switch-active-color: $secondary-color;
@@ -11,7 +13,7 @@ $switch-active-color: $secondary-color;
 
 @import "bower_components/sass-mediaqueries/_media-queries";
 
-$control-height: 74px;
+$control-height: 80px;
 
 .setting-right {
   margin-left: auto;
@@ -65,7 +67,7 @@ $control-height: 74px;
 
 .setting-arrow {
   cursor: pointer;
-  vertical-align: middle;
+  vertical-align: text-top;
 
   &.disabled {
     cursor: progress;
@@ -94,6 +96,8 @@ $control-height: 74px;
 .setting-incrementable-right {
   text-align: center;
   margin-top: 2px;
+  width: 104px;
+  margin-right: -20px;
 }
 
 .setting-incrementable-shortcut {
@@ -110,6 +114,16 @@ $control-height: 74px;
 
   &.off {
     color: transparent;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.setting-incrementable-counter {
+  .liquid-container {
+    width: 30px;
   }
 }
 
