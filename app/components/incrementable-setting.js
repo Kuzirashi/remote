@@ -32,13 +32,29 @@ export default Ember.Component.extend(SwitchableComponentMixin, {
         return;
       }
 
-      const desiredValue = this.get('model') + this.get('step');
+      const desiredValue = this.get('model') - this.get('step');
 
       if (!this._isInBounds(desiredValue)) {
         return;
       }
 
       this.set('model', desiredValue);
+    },
+
+    setToMaximum() {
+      if (this.isDisabled()) {
+        return;
+      }
+
+      this.set('model', this.get('max'));
+    },
+
+    setToMinimum() {
+      if (this.isDisabled()) {
+        return;
+      }
+
+      this.set('model', this.get('min'));
     }
   }
 });

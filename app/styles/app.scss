@@ -9,6 +9,8 @@ $switch-active-color: $secondary-color;
 
 @import "foundation";
 
+$control-height: 74px;
+
 .text-switch-wrapper {
   position: relative;
   height: 32px;
@@ -22,7 +24,9 @@ $switch-active-color: $secondary-color;
   z-index: 1;
 }
 
-.stylish-overlay {
+.setting-control {
+  height: $control-height;
+
   &::after {
     content: '';
     display: block;
@@ -62,6 +66,7 @@ $switch-active-color: $secondary-color;
 
 .setting-arrow {
   cursor: pointer;
+  vertical-align: middle;
 
   &.disabled {
     cursor: progress;
@@ -82,7 +87,33 @@ $switch-active-color: $secondary-color;
 }
 
 .temperature-feedback {
-  width: 100vw;
-  height: 100vh;
+  background-size: cover;
   position: absolute;
+  transition: opacity 1s ease-in-out;
+}
+
+.setting-incrementable-right {
+  text-align: center;
+  margin-top: -18px;
+  width: 104px;
+  position: absolute;
+  top: 18px;
+  right: 0;
+}
+
+.setting-incrementable-shortcut {
+  cursor: pointer;
+}
+
+.lights-display {
+  text-align: center;
+  font-size: 96px;
+  color: white;
+  z-index: 1;
+  position: relative;
+  transition: all 1s cubic-bezier(.87,-.41,.19,1.44);
+
+  &.off {
+    color: transparent;
+  }
 }
