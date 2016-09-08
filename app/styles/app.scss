@@ -21,14 +21,19 @@ $control-height: 80px;
   margin-top: 4px;
 }
 
-.setting-control {
+.semi-transparent-element {
   height: $control-height;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: $label-font-sizing;
   background: rgba(226, 226, 226, 0.58);
   color: $primary-color;
+}
+
+.setting-control {
+  @extend .semi-transparent-element;
+  
+  font-size: $label-font-sizing;
 
   &::after {
     content: '';
@@ -44,8 +49,11 @@ $control-height: 80px;
   }
 }
 
-.house-item a {
-  width: 100%;
+.house-item {
+  a {
+    @extend .semi-transparent-element;
+    width: 100%;
+  }
 }
 
 .main-content {
