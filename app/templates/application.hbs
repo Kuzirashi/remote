@@ -1,6 +1,18 @@
 <div class="live-feedback">
-  {{temperature-feedback min=settings.temperatureMin max=settings.temperatureMax class='cold' invertOpacity=true}}
-  {{temperature-feedback min=settings.temperatureMin max=settings.temperatureMax class='hot'}}
+  {{temperature-feedback
+      min=settings.temperatureMin
+      max=settings.temperatureMax
+      class='cold'
+      invertOpacity=true
+      maxOpacity=0.8
+  }}
+
+  {{temperature-feedback
+    min=settings.temperatureMin
+    max=settings.temperatureMax
+    class='hot'
+    maxOpacity=0.8
+  }}
 
   <main class="main-content">
     {{liquid-outlet}}
